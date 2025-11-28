@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Project.Domain.EmployeeDetails>
+
+<h2>All Employees</h2>
+
+@if (Model != null && Model.Any())
+{
+    <table class="table" >
+        <thead>
+            <tr>
+              
+                <th>Name</th>
+                <th>Surname</th>
+                <th>ID_Number</th>
+                <!-- Add other columns as needed -->
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var employee in Model)
+            {
+                <tr>
+                    
+                    <td>@employee.empName</td>
+                    <td>@employee.empSurname</td>
+                    <td>@employee.empIdNum</td>
+                   
+                </tr>
+            }
+        </tbody>    
+    </table>
+}
+else
+{
+    <p>No employees found.</p>
+}

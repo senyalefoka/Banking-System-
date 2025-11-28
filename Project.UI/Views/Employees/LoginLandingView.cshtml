@@ -1,0 +1,38 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutLandPage.cshtml";
+    ViewData["Title"] = "LoginLandingView";
+}
+
+<link rel="stylesheet" href="~/css/landingPage.css" asp-append-version="true" />
+<!-- Main Content - WRAPPED with pageContent ID -->
+<div id="pageContent" class="page-content">
+    <div class="text-box">
+        <h1>Welcome to the Best Banking System</h1>
+        <p>Your trusted partner in financial excellence.</p>
+        <a class="hero-btn"
+           asp-area=""
+           asp-controller="Employees"
+           asp-action="DetailsView"
+           id="visit-btn"
+           aria-label="Visit us to know more about our banking services">
+            Visit us to know more
+        </a>
+    </div>
+</div>
+
+<!-- Loading Modal -->
+<div class="modal-backdrop" id="loadingModal" style="display: none;" aria-hidden="true" aria-label="Loading content">
+    <div class="modal-content-small">
+        <div class="spinner-container">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <p class="loading-text">Preparing your experience...</p>
+        </div>
+        <p class="text-muted small mt-2">This will only take a moment</p>
+    </div>
+</div>
+
+<script>
+    // Enhanced script as shown above
+</script>

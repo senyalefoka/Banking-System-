@@ -1,0 +1,375 @@
+﻿
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url('https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2% 6%;
+}
+
+    nav img {
+        width: 150px;
+    }
+
+/* Fix: Changed to match HTML class name */
+.nav-link {
+    flex: 1;
+    text-align: right;
+}
+
+    /* Target the correct structure */
+    .nav-link ul.navbar-nav {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+    }
+
+.text-box {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+    .text-box h1 {
+        font-size: 62px;
+    }
+
+
+    .text-box p {
+        margin: 10px 0 40px;
+        font-size: 14px;
+        color: #fff;
+    }
+
+.icon-bank {
+    color: #ff0000 !important
+}
+
+.nav-link ul.navbar-nav li.nav-item {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+    /* Fix: Correct selector for navigation links */
+    .nav-link ul.navbar-nav li.nav-item a.nav-link {
+        color: #fff !important;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: bold;
+        background: transparent !important;
+        border: none !important;
+        padding: 8px 12px !important;
+        display: block;
+        position: relative;
+    }
+
+        /* Fix: Hover effects - corrected placement */
+        .nav-link ul.navbar-nav li.nav-item a.nav-link::after {
+            content: '';
+            height: 3px;
+            width: 0%;
+            background: #f44336;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: 0.5s;
+        }
+
+        .nav-link ul.navbar-nav li.nav-item a.nav-link:hover::after {
+            width: 100%;
+        }
+
+/* Remove Bootstrap's default navbar styles */
+.navbar-nav {
+    display: inline-block !important;
+}
+
+.nav-item {
+    display: inline-block !important;
+    float: none !important;
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    cursor: pointer;
+}
+
+    .hero-btn:hover {
+        border: 1px solid #f44336;
+        background: #f44336;
+        transition: 1s;
+    }
+
+@media(max-width:700px) {
+    .text-box h1 {
+        font-size: 20px;
+    }
+}
+
+.service-category {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row {
+    margin-top: 5%;
+    display: flex;
+   flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.service-box {
+    flex-basis: 32%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 15%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+    .service-box:hover { /* ✅ Fixed - no space before colon */
+        box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
+    }
+
+/* In your DetailsView.css */
+.card {
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+.page-disabled {
+    pointer-events: none !important;
+    opacity: 0.6;
+    user-select: none;
+    cursor: not-allowed;
+    filter: grayscale(20%);
+}
+
+    .page-disabled a,
+    .page-disabled button,
+    .page-disabled input,
+    .page-disabled select {
+        pointer-events: none !important;
+        cursor: not-allowed !important;
+    }
+
+/* Modal Backdrop - Centers the modal */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Light overlay */
+    backdrop-filter: blur(2px); /* Blur effect behind modal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+/* Small Square Modal - Centers content inside */
+.modal-content-small {
+    background: transparent;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers vertically */
+    align-items: center; /* Centers horizontally */
+}
+
+/* Spinner Container */
+.spinner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* Spinner */
+.spinner-border {
+    width: 2rem;
+    height: 2rem;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-text {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #333;
+    font-weight: 500;
+}
+
+
+/* Accessibility */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+h3 {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.Branches {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+    .Branches h1 {
+        font-size: 36px;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 20px;
+    }
+
+    .Branches p {
+        color: #666;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.6;
+        margin-bottom: 40px;
+    }
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.campus-col {
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+    .campus-col:hover {
+        transform: translateY(-10px);
+    }
+
+    .campus-col img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s ease;
+    }
+
+    .campus-col:hover img {
+        transform: scale(1.1);
+    }
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: background 0.5s ease;
+}
+
+    .layer:hover {
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    .layer h3 {
+        width: 100%;
+        font-weight: 500;
+        color: white;
+        font-size: 26px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.5s ease, bottom 0.5s ease;
+    }
+
+    .layer:hover h3 {
+        bottom: 49%;
+        opacity: 1;
+    }
+
+.footer {
+    border: 1px solid #000000;
+    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7));
+}

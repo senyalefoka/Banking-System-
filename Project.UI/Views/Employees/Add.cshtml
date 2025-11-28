@@ -1,0 +1,59 @@
+﻿@model Project.Domain.Entities.PersonalDetail
+
+@{
+    ViewData["Title"] = "Add Personal Details";
+    Layout = "~/Views/Shared/_LayoutLandPage.cshtml";
+}
+
+<link rel="stylesheet" href="~/css/add-personal-details.css" asp-append-version="true" />
+
+
+
+        <form asp-action="Add">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class=" form-group mb-3">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+
+            </div>
+
+            <div class=" form-group mb-3">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+
+            </div>
+
+            <div class=" form-group mb-3">
+                <label asp-for="IDNumber" class="control-label"></label>
+                <input asp-for="IDNumber" class="form-control" />
+                <span asp-validation-for="IDNumber" class="text-danger"></span>
+
+            </div>
+
+            <div class=" form-group mb-3">
+                <label asp-for="DateOfBirth" class="control-label"></label>
+                <input asp-for="DateOfBirth" type="date" class="form-control" />
+                <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+
+            </div>
+
+            <div class=" form-group mb-3">
+                <label asp-for="AccountNumber" class="control-label"></label>
+                <input asp-for="AccountNumber" class="form-control" />
+                <span asp-validation-for="AccountNumber" class="text-danger"></span>
+
+            </div>
+
+            <div class=" form-group">
+                <input type="submit" value="Add" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+
+            </div>
+
+        </form>
+
+
+
+    

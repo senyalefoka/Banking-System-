@@ -1,0 +1,8 @@
+﻿KeyValuePair`2,KeyValuePair`2.Key,KeyValuePair`2.Value
+"[Accounts, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary+ModelStateNode]",Accounts,Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary+ModelStateNode
+"[IDNumber, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary+ModelStateNode]",IDNumber,Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary+ModelStateNode
+"[LastName, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary+ModelStateNode]",LastName,Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary+ModelStateNode
+"[FirstName, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary+ModelStateNode]",FirstName,Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary+ModelStateNode
+"[DateOfBirth, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary+ModelStateNode]",DateOfBirth,Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary+ModelStateNode
+"[Transactions, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary+ModelStateNode]",Transactions,Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary+ModelStateNode
+"[AccountNumber, Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary+ModelStateNode]",AccountNumber,Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary+ModelStateNode

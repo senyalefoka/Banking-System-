@@ -1,0 +1,33 @@
+﻿@model List<Project.Domain.Entities.Transactions>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        @foreach (var p in Model)
+        {
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h4>Account of : @p.Account.PersonalDetail.FirstName @p.Account.PersonalDetail.LastName </h4>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Account:  @p.Account.PersonalDetail.AccountNumber </strong> </p>
+
+
+                        <p><strong>TransactionDate:</strong> @p.TransactionDate</p>
+                        <p><strong>TransactionType:</strong> @p.TransactionType</p>
+                        <p><strong>Descriptiion:</strong> @p.Descriptiion</p>
+                        <p><strong>Outstanding_Amount:</strong> @p.Outstanding_Amount</p>
+
+
+
+                    </div>
+                    <div class="card-footer text-end">
+                        <a asp-action="Edit" asp-route-id="@p.code" class="btn btn-sm btn-warning">Edit</a>
+                        <a asp-action="Index" class="btn btn-sm btn-secondary">Back</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

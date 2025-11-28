@@ -1,0 +1,23 @@
+﻿@model Project.Domain.Entities.Login
+
+@{
+    Layout = "~/Views/Shared/_LayouForIncshtml.cshtml";
+    ViewData["Title"] = "LandPage";
+}
+<link rel="stylesheet" href="~/css/Login.css" asp-append-version="true" />
+<div class="container">
+    <div class="left">
+        <h2>Welcome Back!</h2>
+    </div>
+    <div class="right">
+        <form asp-action="LoginView" method="post">
+            <h2>Login</h2>
+            <label>USERNAME</label>
+            <input type="text" name="name" class="form-control" required />
+            <label>PASSWORD</label>
+            <input type="password" name="password" class="form-control" required />
+            <button type="submit" class="btn mt-3">LOG IN</button>
+        </form>
+    </div>
+</div>
+
