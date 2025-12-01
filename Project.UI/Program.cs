@@ -1,5 +1,8 @@
+using FluentValidation;
 using Microsoft.EntityFrameworkCore;
+using Project.Domain.Entities;
 using Project.Domain.Interfaces;
+using Project.Domain.Validators;
 using Project.Infrastructure;
 using Project.Infrastructure.Repositories;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
@@ -14,7 +17,8 @@ builder.Services.AddScoped<ILogin, loginRepository>();
 builder.Services.AddScoped<IPersonalDetailsRepository, PersonalDetailsRepository>();
 builder.Services.AddScoped<IAccount, AccountRepositories>();
 builder.Services.AddScoped<ITransactionRepository, TransactionRepository>();
-
+// Program.cs
+builder.Services.AddScoped<IValidator<PersonalDetail>, PersonalDetailsValidator>();
 
 
 // Add services to the container.
